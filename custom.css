@@ -1,0 +1,45 @@
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+.contenido {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#div-portada{
+    background-image: url("imagenes/estadio.jpg");
+    background-size: 100%;   
+    background-repeat: no-repeat;     
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+     
+}
+
+#historia{
+    border: solid 3px #add8e680;
+    border-radius: 3%;
+    padding: 10px;
+    margin: 10px;
+    background-color: lightblue;
+    text-align: justify; 
+    
+}
+
+#formulario {
+    margin-top: 20px;    
+}
+.contenido {
+    height: 100%;
+    width: 100%;
+}
+
+#row-texto-portada{
+    padding: 10%;
+}
+
+#fondo-letras{
+    background-color: #00000080;
+}

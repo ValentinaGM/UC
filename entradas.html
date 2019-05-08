@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <title>Cruzados - Universidad Católica</title>
+   <link rel="shortcut icon" type="image/png" href="imagenes/cruzados.ico">
+   <link rel="stylesheet"  href="custom.css">
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">
+      <img src="imagenes/cruzados.ico" width="30" height="30" class="d-inline-block align-top" alt="">
+      cruzados - Universidad Católica
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link" href="index.html">Inicio </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="historia.html">Historia</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="entradas.html">Entradas</a>
+        </li>     
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
+      </form>
+    </div>
+  </nav>
+  <div class="col-12 col-md-12">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#entradas" role="tab" aria-controls="entradas" aria-selected="true">Comprar Entrada</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#contacto" role="tab" aria-controls="contacto" aria-selected="false">Contacto</a>
+      </li>    
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="entradas" role="tabpanel" aria-labelledby="entradas-tab">
+        <div class="row">
+          <div class="col-md-12" >
+            <form id="formulario">
+              <div class="form-row align-items-center">
+                <div class="form-group col-md-3">
+                    <label for="nombre">Nombre</label>
+                    <input class="form-control" id="nombre">
+                </div>  
+                <div class="form-group col-md-3">
+                    <label for="apellido">Apellido</label>
+                    <input class="form-control" id="apellido">
+                </div> 
+                <div class="form-group col-md-3">
+                    <label for="correo">RUT</label>
+                    <input class="form-control" id="rut">
+                </div>   
+                <div class="form-group col-md-3">
+                  <label for="tipo">Tipo</label>
+                  <select class="form-control" id="tipo">
+                    <option>Niño</option>
+                    <option>Adulto</option>                                       
+                  </select>
+                </div>       
+                <div class="form-group col-md-3">
+                  <label for="sector">Sector</label>
+                  <select class="form-control" id="sector">
+                    <option>Andes</option>
+                    <option>Galeria</option> 
+                    <option>Pacifico</option>  
+                    <option>VIP</option>                                        
+                  </select>
+                </div> 
+                <div class="col-auto"> 
+                  <button type="button" onclick="agregar()" class="btn btn-success mt-3">Agregar</button>
+                </div>
+                <div class="col-auto"> 
+                  <button type="submit" class="btn btn-danger mt-3">Finalizar Compra</button>
+                </div>
+              </div>
+            </form> 
+          </div>
+          <div class="col-md-12">            
+            <div class="table-responsive">
+              <table class="table table-info table-bordered table-striped">
+                <thead>
+                  <tr class="text-white bg-primary">
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">RUT</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Sector</th>
+                  </tr>
+                </thead>
+                <tbody id="tabla-datos">
+                  
+                </tbody>
+              </table>
+            </div>             
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="contacto" role="contacto" aria-labelledby="contacto-tab">
+        <div class="row">
+          <div class="col-md-6" >
+            <form id="formulario">
+              <div class="form-group">
+                  <label for="nombre">Nombre</label>
+                  <input class="form-control" id="nombre">
+              </div>  
+              <div class="form-group">
+                  <label for="correo">Correo</label>
+                  <input type="email" class="form-control" id="correo" placeholder="correo@ejemplo.com">
+              </div>   
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">Asunto</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>Consulta</option>
+                  <option>Sugerencia</option>
+                  <option>Reclamo</option>
+                  <option>Otro</option>                    
+                </select>
+              </div>       
+              <div class="form-group">
+                <label for="Mensaje">Mensaje</label>
+                <textarea class="form-control" id="Mensaje" rows="3"></textarea>
+              </div>
+              <button type="button" class="btn btn-primary">Enviar</button>
+            </form> 
+          </div>
+          <div class="col-md-6" >            
+            <img class="img-fluid" src="imagenes/contacto.png">             
+          </div>
+        </div>
+      </div>    
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+  <script type="text/javascript">
+    function agregar() {
+      var tabla = document.getElementById('tabla-datos');
+      var fila = tabla.insertRow(0);
+
+      var nombre = fila.insertCell(0);
+      var apellido = fila.insertCell(1); 
+      var rut = fila.insertCell(2);
+      var tipo = fila.insertCell(3);
+      var sector = fila.insertCell(4);
+      nombre.innerHTML = document.getElementById('nombre').value;
+      apellido.innerHTML = document.getElementById('apellido').value;
+      rut.innerHTML = document.getElementById('rut').value;
+      tipo.innerHTML = document.getElementById('tipo').value;
+      sector.innerHTML = document.getElementById('sector').value;    
+      limpiar();
+
+    }
+
+    function limpiar(){
+      document.getElementById('nombre').value="";
+    }
+  </script>
+</html>
